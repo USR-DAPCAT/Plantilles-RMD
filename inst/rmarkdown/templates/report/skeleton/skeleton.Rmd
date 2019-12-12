@@ -92,10 +92,16 @@ devtools::source_url(link_source)
 # Carrega dades
 # load(here::here("resultats","nomarxiu.Rdata"))
 # read.csv(here::here("resultats","Nomarxiu.csv"))
+# foreign::read.spss(here::here("dades","nomarxiu.sav"),labels=T)
+
 ```
 
 
 ```{r preparacio,include=F}
+
+
+
+
 ```
 
 
