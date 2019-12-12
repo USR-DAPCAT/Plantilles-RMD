@@ -5,6 +5,11 @@
 # Session Data files
 .RData
 
+# Fitxers web
+/inst/rmarkdown/templates/report/skeleton/.html
+/*.html
+*.html
+
 # User-specific files
 .Ruserdata
 
