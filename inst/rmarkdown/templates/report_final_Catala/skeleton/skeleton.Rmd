@@ -15,7 +15,7 @@ output:
 ---
 title: "Malalties i factors de risc cardiovascular en la gent gran que surt poc de casa"
 
-author: "Equip investigador - A Matías, B Barrachina, M Mules, J Cantonigòs , J Clota, D Mauri"
+author: "Equip d'investigador - A Matías, B Barrachina, M Mules, J Cantonigòs , J Clota, D Mauri"
 
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 ---
