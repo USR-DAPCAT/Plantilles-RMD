@@ -13,9 +13,9 @@ output:
 ---
 
 ---
-title: "Malalties i factors de risc cardiovascular en la gent gran que surt poc de casa"
+title: "Enfermedades y factores de riesgo cardiovascular en los ancianos que salen poco de casa"
 
-author: "Equip investigador - A Matías, B Barrachina, M Mules, J Cantonigòs , J Clota, D Mauri"
+author: "Equipo investigador -A Matías, B Barrachina, M Mules, J Cantonigòs , J Clota, D Mauri"
 
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 ---
@@ -34,41 +34,39 @@ date: "`r format(Sys.time(), '%d %B, %Y')`"
 
 ****
 
-## Estat:
+## Estado:
 
-**Últimes actualizacions** 
+**Últimas actualizaciones** 
 
 &check; Revisado código.  <br/>
 &check; Incluir tabaco/PAS/PAD en tablas pre matching.  <br/>
 
 
-**Realizat**
+**Realizado**
 
-&check; Afegir comparativa Prenent categoria de referència grup ISGLT2  <br/>
-&check; Marginals totals d'algunes taules   <br/>
-&check; Afegir medianes + IQR de quantitatives  <br/>
-&check; Càlcul de p-valors que falten <br/>
-&check; Afegit nombre d'envasos per grup durant el seguiment <br/>
-&check; 
-Afegit nom d'envasos per grup durante el Seguiment <br/>
+&check; Añadir comparativa Tomando categoría de referencia grupo ISGLT2  <br/>
+&check; Marginales totales de algunas tablas   <br/>
+&check; Añadir medianas + IQR de cuantitativas  <br/>
+&check; Cálculo de p-valores que faltan <br/>
+&check; Añadido número de envases por grupo durante el seguimiento <br/>
+&check; Añadido nombre de envases por grupo durant el Seguimiento <br/>
 
-**Pendent**
+**Pendiente**
 
-* Revisió i depuració d'errors 
-* Edició de taules 
+* Revisión y depuración de errores
+* Edición de tablas 
 
-# 1 Objectiu Principal
+# 1 Objectivo Principal
 
-Estimar la variabilitat entre professionals en quant al control de la HbA1c, ajustant per les característiques a nivell de pacient.
+Estimar la variabilidad entre profesionales con respecto a el control de la HbA1c, ajustando por las características a nivel de paciente.
 
-# 2 Mètodes
+# 2 Métodos
 
-INCLUSIÓ: pacients diabètics tipus 2 entre 30 i 90 anys amb registre a la història electrònica de diabetis: ICD-10: Codi E11 i E14.
-EXCLUSIÓ: pacients classificats com a morts o bé com a traslladats; pacients de recent diagnòstic.
+INCLUSIÓN: pacientes diabéticos tipo 2 entre 30 y 90 años con registro en la historia electrónica de diabetes: ICD-10: Código E11 y E14.
+EXCLUSIÓN: pacientes clasificados como muertos o bien como trasladados; pacientes de reciente diagnóstico.
 
-# 3 Anàlisi estadístic
-Es descriu el perfil demogràfic i clínic dels pacients inclosos emprenant els estadístics més adeqüats en cada cas en funció del tipus de variable. Es descriu el perfil demogràfic i clínic dels professionals inclosos emprenant els estadístics més adeqüats en cada cas en funció del tipus de variable.
-I es mira la seva mobilitat, respecte la seva edat i mamalties cardiovasculars.
+# 3 Análisis estadístico
+Se describe el perfil demográfico y clínico de los pacientes incluidos empreando los estadísticos más adecuados en cada caso en función del tipo de variable. Se describe el perfil demográfico y clínico de los profesionales incluidos empreando los estadísticos más adecuados en cada caso en función del tipo de variable.Y se mira su movilidad, respecto a su edad y enfermedades cardiovasculares.
 
 
 
@@ -99,16 +97,16 @@ devtools::source_url(link_source)
 ```
 
 
-# 4 Resultats
+# 4 Resultados
 
-## 4.1 Característiques dels pacients
+## 4.1 Características de los pacientes
 
 
 ```{r resultats1, include=T}
-compareGroups::descrTable(cars) %>% export2md(caption = paste0("Table 1: Sociodemographic variables pre matching"))
+compareGroups::descrTable(cars) %>% export2md(caption = paste0("Table 1: Variables sociodemográficas pre aparellament"))
 ```
 
-# 5. Figures
+# 5. Figuras
 
 ```{r figura1, include=T}
 plot(cars$speed,cars$dist)

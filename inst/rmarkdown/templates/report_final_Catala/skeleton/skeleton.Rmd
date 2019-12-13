@@ -38,8 +38,8 @@ date: "`r format(Sys.time(), '%d %B, %Y')`"
 
 **Últimes actualizacions** 
 
-&check; Revisado código.  <br/>
-&check; Incluir tabaco/PAS/PAD en tablas pre matching.  <br/>
+&check; Revisat codi.  <br/>
+&check; Incluir tabac/PAS/PAD en taules pre matching.  <br/>
 
 
 **Realizat**
@@ -49,9 +49,7 @@ date: "`r format(Sys.time(), '%d %B, %Y')`"
 &check; Afegir medianes + IQR de quantitatives  <br/>
 &check; Càlcul de p-valors que falten <br/>
 &check; Afegit nombre d'envasos per grup durant el seguiment <br/>
-&check; 
-Afegit nom d'envasos per grup durante el Seguiment <br/>
-
+&check; Afegit nom d'envasos per grup durant el Seguiment <br/>
 **Pendent**
 
 * Revisió i depuració d'errors 
@@ -67,8 +65,7 @@ INCLUSIÓ: pacients diabètics tipus 2 entre 30 i 90 anys amb registre a la hist
 EXCLUSIÓ: pacients classificats com a morts o bé com a traslladats; pacients de recent diagnòstic.
 
 # 3 Anàlisi estadístic
-Es descriu el perfil demogràfic i clínic dels pacients inclosos emprenant els estadístics més adeqüats en cada cas en funció del tipus de variable. Es descriu el perfil demogràfic i clínic dels professionals inclosos emprenant els estadístics més adeqüats en cada cas en funció del tipus de variable.
-I es mira la seva mobilitat, respecte la seva edat i mamalties cardiovasculars.
+Es descriu el perfil demogràfic i clínic dels pacients inclosos emprenant els estadístics més adeqüats en cada cas en funció del tipus de variable. Es descriu el perfil demogràfic i clínic dels professionals inclosos emprenant els estadístics més adeqüats en cada cas en funció del tipus de variable.I es mira la seva mobilitat, respecte la seva edat i malalties cardiovasculars.
 
 
 
@@ -111,7 +108,7 @@ devtools::source_url(link_source)
 
 
 ```{r resultats1, include=T}
-compareGroups::descrTable(cars) %>% export2md(caption = paste0("Table 1: Sociodemographic variables pre matching"))
+compareGroups::descrTable(cars) %>% export2md(caption = paste0("Taula 1: Les variables sociodemogràfiques pre aparellament"))
 ```
 
 # 5. Figures

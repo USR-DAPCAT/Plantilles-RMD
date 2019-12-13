@@ -13,12 +13,14 @@ output:
 ---
 
 ---
-title: "Malalties i factors de risc cardiovascular en la gent gran que surt poc de casa"
+title: ""Diseases and cardiovascular risk factors in older people who leave little of their homes"
 
-author: "Equip investigador - A Matías, B Barrachina, M Mules, J Cantonigòs , J Clota, D Mauri"
+author: " Research team:  A Matías, B Barrachina, M Mules, J Cantonigòs , J Clota, D Mauri"
 
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 ---
+
+
 
 &nbsp;
 <script>
@@ -34,41 +36,36 @@ date: "`r format(Sys.time(), '%d %B, %Y')`"
 
 ****
 
-## Estat:
+## State:
 
-**Últimes actualizacions** 
+**Latest updates** 
 
-&check; Revisado código.  <br/>
-&check; Incluir tabaco/PAS/PAD en tablas pre matching.  <br/>
+&check; revised code.  <br/>
+&check; Include  tobacco/SBP/DBP on tables pre matching.  <br/>
 
 
-**Realizat**
+**Done**
 
-&check; Afegir comparativa Prenent categoria de referència grup ISGLT2  <br/>
-&check; Marginals totals d'algunes taules   <br/>
-&check; Afegir medianes + IQR de quantitatives  <br/>
-&check; Càlcul de p-valors que falten <br/>
-&check; Afegit nombre d'envasos per grup durant el seguiment <br/>
-&check; 
-Afegit nom d'envasos per grup durante el Seguiment <br/>
+&check; Calculation of missing p-values <br/>
+&check; An additional number of packages per group was added during the monitoring <br/>
+&check; Added name of containers by group during the monitoring <br/>
 
-**Pendent**
+**pending**
 
-* Revisió i depuració d'errors 
-* Edició de taules 
+* Review and debugging errors
+* Editing tables 
 
-# 1 Objectiu Principal
+# 1 The primary objective 
 
-Estimar la variabilitat entre professionals en quant al control de la HbA1c, ajustant per les característiques a nivell de pacient.
+To estimate the variability among professionals regarding the control of the HbA1c, adjusting for the characteristics at the patient level.
 
-# 2 Mètodes
+# 2 Methods
 
-INCLUSIÓ: pacients diabètics tipus 2 entre 30 i 90 anys amb registre a la història electrònica de diabetis: ICD-10: Codi E11 i E14.
-EXCLUSIÓ: pacients classificats com a morts o bé com a traslladats; pacients de recent diagnòstic.
+NCLUSION: diabetic patients type 2 between 30 and 90 years old with a record in the electronic history of diabetes: ICD-10: Code E11 and E14.
+EXCLUSION: patients classified as dead or transferred; patients with recent diagnosis.
 
-# 3 Anàlisi estadístic
-Es descriu el perfil demogràfic i clínic dels pacients inclosos emprenant els estadístics més adeqüats en cada cas en funció del tipus de variable. Es descriu el perfil demogràfic i clínic dels professionals inclosos emprenant els estadístics més adeqüats en cada cas en funció del tipus de variable.
-I es mira la seva mobilitat, respecte la seva edat i mamalties cardiovasculars.
+# 3 Statistical Analysis
+The demographic and clinical profile of the included patients is described using the most appropriate statistics in each case, depending on the type of variable. The demographic and clinical profile of the professionals included are described, using the most appropriate statistics in each case, depending on the type of variable.
 
 
 
@@ -99,9 +96,9 @@ devtools::source_url(link_source)
 ```
 
 
-# 4 Resultats
+# 4 Results
 
-## 4.1 Característiques dels pacients
+## 4.1  The characteristics of the patients 
 
 
 ```{r resultats1, include=T}
