@@ -1,11 +1,12 @@
 Package: PlantillesRMD
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Basic template to make a final data analysis report
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Author: Jordi Real & Ramón Puig
+Maintainer: Jordi Real <jreal@idiapjgol.info>
+Description: This template include the minimum parts that a final data analysis report require.
+    We include some packages and functions useful to generate a descriptive analysis in a html document. 
+    This template follow the strategy LLEPALI. 
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
