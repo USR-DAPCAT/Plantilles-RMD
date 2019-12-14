@@ -1,23 +1,18 @@
-
 ---
+title: "Malalties i factors de risc cardiovascular en la gent gran que surt poc de casa"
+author: "Jordi Real & Ramó Puig"
+website: "https://github.com/USR-DAPCAT/"
+
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+
 output:
   html_document:
     df_print: paged
     toc: true
     fig_caption: true
   pdf_document: default
-  word_document: default  
-  in_header: logoDAP_Cat.png
-  header-includes: \usepackage{draftwatermark}
-  
----
+  word_document: default
 
----
-title: "Malalties i factors de risc cardiovascular en la gent gran que surt poc de casa"
-
-author: "Equip d'investigador - A Matías, B Barrachina, M Mules, J Cantonigòs , J Clota, D Mauri"
-
-date: "`r format(Sys.time(), '%d %B, %Y')`"
 ---
 
 &nbsp;
@@ -30,17 +25,14 @@ date: "`r format(Sys.time(), '%d %B, %Y')`"
    });
 </script>
 
-
-
 ****
 
-## Estat:
+## 0. Estat:
 
 **Últimes actualizacions** 
 
 &check; Revisat codi.  <br/>
 &check; Incluir tabac/PAS/PAD en taules pre matching.  <br/>
-
 
 **Realizat**
 
@@ -50,21 +42,22 @@ date: "`r format(Sys.time(), '%d %B, %Y')`"
 &check; Càlcul de p-valors que falten <br/>
 &check; Afegit nombre d'envasos per grup durant el seguiment <br/>
 &check; Afegit nom d'envasos per grup durant el Seguiment <br/>
+
 **Pendent**
 
 * Revisió i depuració d'errors 
 * Edició de taules 
 
-# 1 Objectiu Principal
+## 1. Objectius
 
 Estimar la variabilitat entre professionals en quant al control de la HbA1c, ajustant per les característiques a nivell de pacient.
 
-# 2 Mètodes
+## 2. Mètodes
 
 INCLUSIÓ: pacients diabètics tipus 2 entre 30 i 90 anys amb registre a la història electrònica de diabetis: ICD-10: Codi E11 i E14.
 EXCLUSIÓ: pacients classificats com a morts o bé com a traslladats; pacients de recent diagnòstic.
 
-# 3 Anàlisi estadístic
+## 3. Anàlisi estadístic
 Es descriu el perfil demogràfic i clínic dels pacients inclosos emprenant els estadístics més adeqüats en cada cas en funció del tipus de variable. Es descriu el perfil demogràfic i clínic dels professionals inclosos emprenant els estadístics més adeqüats en cada cas en funció del tipus de variable.I es mira la seva mobilitat, respecte la seva edat i malalties cardiovasculars.
 
 
@@ -77,6 +70,8 @@ library(dplyr)
 # CArrego funcions -------------------
 link_source<-paste0("https://github.com/jrealgatius/Stat_codis/blob/master/funcions_propies.R","?raw=T")
 devtools::source_url(link_source)
+
+#   template: template.html
 ```
 
 
@@ -98,21 +93,27 @@ devtools::source_url(link_source)
 
 
 
-
 ```
 
+## 4. Resultats
 
-# 4 Resultats
-
-## 4.1 Característiques dels pacients
+- 4.1 Característiques dels pacients
 
 
 ```{r resultats1, include=T}
 compareGroups::descrTable(cars) %>% export2md(caption = paste0("Taula 1: Les variables sociodemogràfiques pre aparellament"))
 ```
 
-# 5. Figures
+## 5. Figures
 
 ```{r figura1, include=T}
 plot(cars$speed,cars$dist)
 ```
+
+&nbsp;
+<hr />
+<p style="text-align: center;">A work by $Jordi Real$ </a></p>
+<p style="text-align: center;"><span style="color: #808080;"><em><https://github.com/USR-DAPCAT/></em></span></p>
+
+
+
