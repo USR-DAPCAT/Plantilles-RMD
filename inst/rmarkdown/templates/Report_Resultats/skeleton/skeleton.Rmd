@@ -11,7 +11,7 @@ output:
     toc: true
     toc_float: true
     fig_caption: true
-    css: usr_styles.css
+    css: logos_css/usr_styles.css
   pdf_document: default
   word_document: default
 
@@ -21,9 +21,9 @@ output:
 <script>
    $(document).ready(function() {
      $head = $('#header');
-     $head.prepend('<img src=\"logoIDIAP.png\" style=\"float: right ;width: 130px;\"/>')
-     $head.prepend('<img src=\"logo_bio.jpg\" style=\"margin-left:25% ;width: 80px;\"/>')
-     $head.prepend('<img src=\"logoDAP_Cat.png\" style=\"float: left:1;width: 185px;\"/>')
+     $head.prepend('<img src=\"logos_css/logoIDIAP.png\" style=\"float: right ;width: 130px;\"/>')
+     $head.prepend('<img src=\"logos_css/logo_bio.jpg\" style=\"margin-left:25% ;width: 80px;\"/>')
+     $head.prepend('<img src=\"logos_css/logoDAP_Cat.png\" style=\"float: left:1;width: 185px;\"/>')
    });
 </script>
 
