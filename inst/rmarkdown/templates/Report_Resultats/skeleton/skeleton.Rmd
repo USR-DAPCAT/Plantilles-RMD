@@ -9,7 +9,9 @@ output:
   html_document:
     df_print: paged
     toc: true
+    toc_float: true
     fig_caption: true
+    css: usr_styles.css
   pdf_document: default
   word_document: default
 
@@ -24,6 +26,9 @@ output:
      $head.prepend('<img src=\"logoDAP_Cat.png\" style=\"float: left:1;width: 185px;\"/>')
    });
 </script>
+
+
+<div class="watermark">DRAFT</div>
 
 ****
 
@@ -110,9 +115,11 @@ compareGroups::descrTable(cars) %>% export2md(caption = paste0("Taula 1: Les var
 plot(cars$speed,cars$dist)
 ```
 
+
 &nbsp;
 <hr />
 <p style="text-align: center;">A work by $Jordi Real$ </a></p>
+<p style="text-align: center;">$Llepali System$ </a></p>
 <p style="text-align: center;"><span style="color: #808080;"><em><https://github.com/USR-DAPCAT/></em></span></p>
 
 
