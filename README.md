@@ -10,5 +10,5 @@ This is our first R package.
 
 Install template code: 
 
-devtools::install_github("USR-DAPCAT/Plantilles-RMD")
+devtools::install_github("USR-DAPCAT/Plantilles-RMD") 
 library("PlantillesRMD")
