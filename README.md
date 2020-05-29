@@ -7,3 +7,8 @@ This parts would have to be **mandatory** in any statistical report.
 The template also conteins some clues, libraries, and functions, utils to help to programe in each part.
 
 This is our first R package.
+
+Install template code: 
+
+devtools::install_github("USR-DAPCAT/Plantilles-RMD")
+library("PlantillesRMD")
