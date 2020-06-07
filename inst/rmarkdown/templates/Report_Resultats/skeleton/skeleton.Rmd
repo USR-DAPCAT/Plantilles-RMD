@@ -32,6 +32,36 @@ output:
 
 ****
 
+```{r htmltemplate, echo=FALSE}
+# ![](logoDAP_Cat.png)
+
+# htmltools::img(src = knitr::image_uri(file.path("logos_css", "logo.jpg")), 
+#                alt = 'logo', 
+#                style = 'position:absolute; top:-90px; right:1%; padding:5px;')
+
+img<-htmltools::img(src = knitr::image_uri(file.path("logos_css", "logo.jpg")), 
+               alt = 'logo', 
+               style = 'position:absolute; text-align: center;padding-right:150px;width: 185px;padding:10px;')
+
+# src="https://www.idiapjgol.org/images/logo.png" 
+# style= 'float: right ;width: 130px'
+# 
+# src="https://avatars2.githubusercontent.com/u/57066591?s=200&v=4"
+# style = 'text-align: center;;margin:auto;width: 80px'
+
+# padding-left:30px
+
+htmlhead <- paste0('
+  <script>
+  document.write(\'<div class="logos">',img,'</div>\')
+  </script>
+  ')
+
+readr::write_lines(htmlhead, path = "header.html")
+
+```
+
+
 ## 0. Estat:
 
 **Últimes actualizacions** 
@@ -41,8 +71,13 @@ output:
 
 **Realizat**
 
+- 12/12/2009: 
+
 &check; Afegir comparativa Prenent categoria de referència grup ISGLT2  <br/>
 &check; Marginals totals d'algunes taules   <br/>
+
+* 12/01/2010 <br/>
+
 &check; Afegir medianes + IQR de quantitatives  <br/>
 &check; Càlcul de p-valors que falten <br/>
 &check; Afegit nombre d'envasos per grup durant el seguiment <br/>
@@ -64,31 +99,6 @@ EXCLUSIÓ: pacients classificats com a morts o bé com a traslladats; pacients d
 
 ## 3. Anàlisi estadístic
 Es descriu el perfil demogràfic i clínic dels pacients inclosos emprenant els estadístics més adeqüats en cada cas en funció del tipus de variable. Es descriu el perfil demogràfic i clínic dels professionals inclosos emprenant els estadístics més adeqüats en cada cas en funció del tipus de variable.I es mira la seva mobilitat, respecte la seva edat i malalties cardiovasculars.
-
-
-```{r htmltemplate, echo=FALSE}
-# ![](logoDAP_Cat.png)
-
-# htmltools::img(src = knitr::image_uri(file.path("logos_css", "logo.jpg")), 
-#                alt = 'logo', 
-#                style = 'position:absolute; top:-90px; right:1%; padding:5px;')
-
-img<-htmltools::img(src = knitr::image_uri(file.path("logos_css", "logo.jpg")), 
-               alt = 'logo', 
-               style = 'position:absolute; text-align: center;padding-right:150px;width: 185px;padding:10px;')
-
-
-# padding-left:30px
-
-htmlhead <- paste0('
-  <script>
-  document.write(\'<div class="logos">',img,'</div>\')
-  </script>
-  ')
-
-readr::write_lines(htmlhead, path = "header.html")
-
-```
 
 
 
