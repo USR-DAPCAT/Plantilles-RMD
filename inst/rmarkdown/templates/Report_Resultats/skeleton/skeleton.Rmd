@@ -136,8 +136,15 @@ devtools::source_url(link_source)
 
 
 ```{r resultats1, include=T}
+
+# Exemple compareGroups
 compareGroups::descrTable(cars) %>% export2md(caption = paste0("Taula 1: Les variables sociodemogràfiques pre aparellament"))
+
+# Exemple table1
+table1::table1(~ Species+Sepal.Length | Species , data = iris,overall=T)
+
 ```
+
 
 ## 5. Figures
 
