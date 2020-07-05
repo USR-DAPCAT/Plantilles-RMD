@@ -130,7 +130,7 @@ devtools::source_url(link_source)
 
 # Genero conductor test amb etiquetes i informació basal en IRIS
 conductor_iris<-data.frame(camp=names(iris),
-                           descripcio=c("Longitud de sepal","Amplada de sepal","longitul del petal","amplada del petal","Especies varies"),
+                           descripcio=c("Longitud sepal","Amplada sepal","longitul petal","Amplada Petal","Especies varies"),
                            taula_basal=c(0,1,2,3,0),recode=c("5","3.1/3.4","","",""))
 
 
@@ -165,7 +165,7 @@ Hmisc::label(iris)
 - 4.1 Característiques dels pacients
 
 
-```{r resultats1, include=T}
+```{r resultats1,message=FALSE,echo=FALSE, include=T,size="huge", results="asis"}
 
 # compareGroups  ----------------
 compareGroups::descrTable(cars) %>% export2md(caption = paste0("Taula 1: Descriptiva"))
@@ -174,18 +174,30 @@ compareGroups::descrTable(cars) %>% export2md(caption = paste0("Taula 1: Descrip
 formu<-formula.text("taula_basal",y="Species",taulavariables=conductor_iris,dt=iris)
 compareGroups::descrTable(formu,iris) %>% export2md(caption = paste0("Taula 1: Descriptiva per grups"))
 
+cat("\n")
 
 # Table1  ------------
-table1::table1(~ Species+Sepal.Length | Species , data = iris,overall="Total")
+library(table1)
+
+cat("\n### Descriptiva de dades \n")
+
+table1::table1(~ Species+Sepal.Length | Species , data = iris,overall="Total", caption="Taula 2")
+
+cat("\n")
 
 formu<-formula_table1("taula_basal",y="Species",taulavariables=conductor_iris,dt=iris)
-table1::table1(formu, data = iris,overall=T,render.continuos=c(.="Mean(CV%)",.="Median"))
+table1::table1(formu, data = iris,overall="Total",caption="Taula 3")
+
+cat("\n")
 
 formu<-formula_table1("taula_basal",taulavariables=conductor_iris)
-table1::table1(formu, data = iris,overall="Total")
+table1::table1(formu, data = iris,overall="Total",caption="Taula4")
 
+cat("\n")
 
-
+# P25-P75
+my.render.cont <- function(x) {with(stats.default(x), sprintf("[%0.2f-%0.2f]", q25,q75))}
+table1::table1(formu , data = iris,overall="Total",render.continuous=my.render.cont, caption="Taula 5 (q25-q75)")
 
 
 ```
