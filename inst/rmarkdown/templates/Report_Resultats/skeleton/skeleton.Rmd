@@ -102,7 +102,7 @@ Es descriu el perfil demogràfic i clínic dels pacients inclosos emprenant els 
 
 
 
-```{r setup, include = FALSE}
+```{r setup, include = F}
 knitr::opts_chunk$set(echo = FALSE, message=FALSE, warning=FALSE, include=F,size="huge")
 library(ggplot2)
 library(dplyr)
@@ -160,12 +160,12 @@ Hmisc::label(iris)
 
 
 
-## 4. Resultats
+## 4. Resultats descriptius
 
 - 4.1 Característiques dels pacients
 
 
-```{r resultats1,message=FALSE,echo=FALSE, include=T,size="huge", results="asis"}
+```{r resultats1, message=FALSE,echo=FALSE, include=T,size="huge", results="asis"}
 
 # compareGroups  ----------------
 compareGroups::descrTable(cars) %>% export2md(caption = paste0("Taula 1: Descriptiva"))
@@ -202,8 +202,22 @@ table1::table1(formu , data = iris,overall="Total",render.continuous=my.render.c
 
 ```
 
+## 5. Models
 
-## 5. Figures
+
+```{r models, message=FALSE,echo=FALSE, include=T,size="huge", results="asis"}
+
+model<-glm(Sepal.Length~Species,iris,family = gaussian)
+
+
+# Mostrar model enformat html
+sjPlot::tab_model(model,show.ci = 0.95)
+
+```
+
+
+
+## 6. Figures
 
 ```{r figura1, include=T}
 
