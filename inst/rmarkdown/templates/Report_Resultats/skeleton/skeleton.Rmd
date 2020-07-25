@@ -123,6 +123,8 @@ devtools::source_url(link_source)
 # foreign::read.spss(here::here("dades","nomarxiu.sav"),labels=T)
 
 
+
+
 ```
 
 
@@ -131,8 +133,8 @@ devtools::source_url(link_source)
 # Genero conductor test amb etiquetes i informació basal en IRIS
 conductor_iris<-data.frame(camp=names(iris),
                            descripcio=c("Longitud sepal","Amplada sepal","longitul petal","Amplada Petal","Especies varies"),
-                           taula_basal=c(0,1,2,3,0),recode=c("5","3.1/3.4","","",""))
-
+                           taula_basal=c(0,1,2,3,0),
+                           recode=c("5","3.1/3.4","","",""))
 
 
 ```
@@ -143,6 +145,26 @@ conductor_iris<-data.frame(camp=names(iris),
 # Recodificar IRIS 
 
 iris<-recodificar(iris,taulavariables = conductor_iris,criteris = "recode")
+```
+
+
+```{r canviar_catref,include=F, warning=TRUE}
+
+# Actualitzo conductor i afegeixo catref
+names(iris)[names(iris)!=conductor_iris$camp]
+conductor_iris<-conductor_iris %>% add_row(camp=names(iris)[names(iris)!=conductor_iris$camp])
+conductor_iris<-conductor_iris %>% tibble::add_column(ref_cat=c("","","","","versicolor","(5, Inf]",""))
+
+
+
+levels(iris$Species)
+levels(iris$Sepal.Length.cat3)
+levels(iris$Sepal.Width.cat4)
+
+iris2<-refcat(iris,conductor_iris,"ref_cat")
+
+levels(iris2$Species)
+levels(iris2$Sepal.Length.cat3)
 
 ```
 
